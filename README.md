@@ -19,7 +19,7 @@ Junction 2017 project, share inspiration through music.
 
 ## To Do List:
 
-- [ ] Spotify API Research
+- [ ] Spotify API Research (shan->web api)
 - [ ] Analysis the humming data(maybe some opensource API)
 - [ ] Geographic API
 - [ ] Backend Development (Database, Data Analysis)
