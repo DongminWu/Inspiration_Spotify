@@ -1,7 +1,7 @@
 # Inspiration_Spotify
 Junction 2017 project, share inspiration through music.
 
-## 交互流程
+## Interactive procedure
 
 ### User `x` who has an inspiration:
 
