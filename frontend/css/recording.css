@@ -1,0 +1,58 @@
+body  {
+/*    background: #999999*/
+    background: #292727
+}
+
+
+
+.title {
+    margin: auto;
+
+    color: #FFF;
+    margin-top: 25%;
+    text-align: center;
+}
+
+.big_circle{
+    border-radius: 50%;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    width: 15em;
+    height: 15em;
+    position: absolute;
+    left: 5em;
+
+}
+
+.circle_container{
+    position: relative;
+}
+.center_circle{
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -180px
+
+/*    display: inline-block;*/
+}
+.two_small_circle{
+    position: absolute;
+    top: 5.5em;
+    left: 3em;
+}
+.small_circle{
+/*    border-color: #fff;*/
+/*    border-width: 1px;*/
+/*    border-style: solid;*/
+    width: 4em;
+    height: 4em;
+    position: absolute;
+}
+.left_small_circle{
+    position: absolute;
+    left:0em;
+}
+.right_small_circle{
+    position: absolute;
+    left: 15.1em;
+}
