@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="external/normalize.css">
     <link rel="stylesheet" href="external/skeleton.css">
     <link rel="stylesheet" href="css/index.css">
+<!--    <link rel="stylesheet" href="external/jquery.mobile-1.4.5.min.css">-->
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -44,7 +45,7 @@
             <div class="twelve columns ">
                 <div class="circle_container">
                     <div class="playtrack">
-                        <div class="mid_circle mid_circle_close mid_circle_position" id="mid_circle">
+                        <div class="mid_circle mid_circle_close mid_circle_position " id="mid_circle">
 
                             <div class="bar_container">
                                 <div class="white_bars bar1"></div>
@@ -77,8 +78,8 @@
 
         </div>
         <div class="row">
-            <div class="six columns offset-by-three foot">
-                <h3> </h3>
+            <div class="six columns offset-by-three ">
+                <h5 class="foot"> </h5>
             </div>
         </div>
 
@@ -88,44 +89,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <!--    Script !!!!-->
-    <script src="external/jquery-3.2.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script>
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
-        $(document).ready(function() {
-            console.log("welcome")
-
-            $(".title").click(function() {
-
-
-                console.log("clicked title")
-                big = $("#big_circle")
-                big.toggleClass("big_circle_open")
-                big.toggleClass("big_circle_close")
-
-                mid = $("#mid_circle")
-                mid.toggleClass("mid_circle_open")
-                mid.toggleClass("mid_circle_close")
-                $(".bar_container").toggle()
-
-
-                
-                $(".mid_circle_shadow").addClass("mid_circle_shadow_open")
-
-
-                 
-                $(".bar1").addClass("bar1_move")
-                $(".bar2").addClass("bar2_move")
-                $(".bar3").addClass("bar3_move")
-                $(".bar4").addClass("bar4_move")
-                
-            
-
-            })
-
-        });
+        
+        
     </script>
+    <script src="js/index.js"></script>
 
 </body>
 
