@@ -96,18 +96,21 @@
 
             $(".title").click(function() {
                 
-                //big open/close
+
                 console.log("clicked title")
                 big = $("#big_circle")
                 big.toggleClass("big_circle_open")
-                //await sleep(2000);
                 big.toggleClass("big_circle_close")
                 
                 mid = $("#mid_circle")
                 mid.toggleClass("mid_circle_open")
-                //await sleep(2000);
                 mid.toggleClass("mid_circle_close")
                 $(".microphone").toggle()
+                
+                
+                $("#spin_two").addClass("spin_two_rotate")
+                
+            
 
             })
 

@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row">
             <div class="six columns offset-by-three title">
-                <h3> Tell me</h>
+                <h3> Tell me</h3>
             </div>
         </div>
         <div class="row">
@@ -44,7 +44,7 @@
                 <div class="circle_container">
                     
                     <div class="mid_circle">
-                        <img src="res/microphone.png" class="microphone" />
+                        <img src="res/microphone.png" onclick='rotateMe(this);' id = "image" class="microphone" />
                     </div>
                     <div class="center_circle">
                         <div class="big_circle"></div>
@@ -65,7 +65,7 @@
         </div>
           <div class="row">
             <div class="six columns offset-by-three foot">
-                <h3> What Inspire you</h>
+                <h3> What Inspire you</h3>
             </div>
         </div>
 
@@ -73,5 +73,8 @@
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/recording.js"></script>  
+    <script src="external/jquery-3.2.1.min.js"></script>
+     
 </body>
 </html>

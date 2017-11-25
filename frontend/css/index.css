@@ -180,7 +180,7 @@ body {
         top: 6.5em;
         margin-left: 0px;
     }
-    
+
 }
 
 .mid_circle_position {
@@ -264,7 +264,22 @@ body {
     transform: rotate(90deg);
     transform-origin: 12.5em;
     z-index: -1;
+    
 }
+
+.spin_two_rotate{
+    animation:2s linear infinite spin_two_rotate_frame;
+}
+
+@keyframes spin_two_rotate_frame{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 
 .left_shadow {
     position: absolute;

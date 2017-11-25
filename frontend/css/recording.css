@@ -34,8 +34,8 @@ body  {
     position: absolute;
     left: 5em;
     z-index: -2;
-
 }
+
 
 .circle_container{
     position: relative;
@@ -92,8 +92,11 @@ body  {
     left: 50%;
     margin-left: -14px;
     top: 1.2em;
+    transition: 1s
 }
-
+.microphone:hover{
+    transform: rotate(360deg);
+}
 .spin_two
 {
 /*
@@ -122,4 +125,16 @@ body  {
 {
     position: absolute;
     left: 14.5em;
+}
+
+.rotate {
+   -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+     transform: rotate(90deg);
+}
+
+.mircophone {
+   -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+     transform: rotate(0deg);
 }
