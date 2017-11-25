@@ -1,0 +1,32 @@
+body{
+    background-color: #4f5259;
+}
+.circle {
+    background: #1DB954;
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+    position: absolute;
+    left:11em;
+    margin-top: 16em;
+}
+.linecircle {
+    background: #000000;
+    width: 18em;
+    height: 3px;
+    border-radius: 100%;
+    position: absolute;
+    left:4em;
+    margin-top: 18em;
+    
+}
+.smallcircle{
+    position:absolute;
+    left: -1em;
+    margin-top: 13em;  
+}
+.rightsmallcircle{
+    position: absolute;
+    left: 17em;
+    
+}
