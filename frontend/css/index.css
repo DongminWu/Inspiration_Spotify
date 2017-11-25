@@ -233,22 +233,129 @@ body {
     /*API: top = (2-new_height)/2*/
 }
 
+.bar1_move{
+    animation: 1.2s linear infinite bar1_move_frame;
+}
+@keyframes bar1_move_frame{
+    0%{
+        left:1em;
+        height:1em;
+        top:0.5em;
+    }
+    25%{
+        left:1em;
+        height: 1.6em;
+        top:0.2em;
+    }
+    50%{
+        left:1em;
+        height: 2em;
+        top:0em;
+    }
+    75%{
+        left:1em;
+        height:1.4em;
+        top:0.3em;
+    }
+    100%{
+        left:1em;
+        height: 0.8em;
+        top:0.6em
+    }
+}
+
 .bar2 {
     left: 2em;
+    height: 1em;
+    top: 0.5em;
 }
 
+.bar2_move{
+    animation: 0.6s linear infinite bar2_move_frame;
+}
+@keyframes bar2_move_frame{
+    
+    0%{
+        left:2em;
+        height: 1.6em;
+        top:0.2em;
+    }
+    25%{
+        left:2em;
+        height:1.8em;
+        top:0.1em;
+    }
+    50%{
+        left:2em;
+        height: 2.0em;
+        top:0em
+    }
+    75%{
+        left:2em;
+        height:1.2em;
+        top:0.4em;
+    }
+    100%{
+        left:2em;
+        height: 1.4em;
+        top:0.3em;
+    }
+}
 .bar3 {
     left: 3em;
-    height: 1.5em;
-    top: 0.25em;
+    height: 1.4em;
+    top: 0.3em;
 }
 
+.bar3_move{
+    animation: 1s linear infinite bar3_move_frame;
+}
+@keyframes bar3_move_frame{
+    0%{
+        left:3em;
+        height: 2em;
+        top:0em;
+    }
+ 
+    50%{
+        left:3em;
+        height: 0.6em;
+        top:0.7em
+    }
+    100%{
+        left:3em;
+        height:2em;
+        top:0em;
+    }
+}
+    
 .bar4 {
     left: 4em;
-    height: 1.6em;
-    top: 0.2em;
+    height: 1.4em;
+    top: 0.3em;
 }
-
+.bar4_move{
+    animation: 0.8s linear infinite bar4_move_frame;
+}
+@keyframes bar4_move_frame{
+    0%{
+        left:4em;
+        height:1em;
+        top:0.5em;
+    }
+    
+    50%{
+        left:4em;
+        height: 2em;
+        top:0em;
+    }
+   
+    100%{
+        left:4em;
+        height: 1em;
+        top:0.5em
+    }
+}
 .spin_two {
     /*
     border-color: #fff;
