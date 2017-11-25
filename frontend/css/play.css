@@ -82,17 +82,26 @@ body  {
     width: 2em;
     height: 2em;
     position: absolute;
-    left: 50%;
+    left: 0%; /*API from 0 to 100*/
     top: 6.5em;
-    margin-left: -35px;
+    margin-left: 0px;
+    z-index: 2
+}
+
+.playtrack{
+    position: absolute;
+    width: 15em;
+    left: 50%; 
+    margin-left: -120px
 }
 
 .playbutton{
     width: 1em;
     position: relative;
     left: 50%;
-    margin-left: -8px;
+    margin-left: -7.5px;
     top:6px;
+    z-index: 3
 
 }
 

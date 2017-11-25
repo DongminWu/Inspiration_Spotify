@@ -73,6 +73,14 @@ body  {
     left: 15.1em;
 }
 
+
+.playtrack{
+    position: absolute;
+    width: 15em;
+    left: 50%; 
+    margin-left: -120px
+}
+
 .mid_circle{
     border-radius: 50%;
     border-color: #fff;
@@ -82,9 +90,10 @@ body  {
     width: 2em;
     height: 2em;
     position: absolute;
-    left: 58%;
+    left: 50%;
     top: 6.5em;
-    margin-left: -35px;
+    margin-left: 0px;
+    z-index: 2;
 }
 
 .microphone{
