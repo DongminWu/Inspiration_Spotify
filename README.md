@@ -25,5 +25,5 @@ Junction 2017 project, share inspiration through music.
 - [ ] Backend Development (Database, Data Analysis)
 - [ ] Frontend Development
   - [ ] Leave the inspiration(Recording the sound)
-  - [ ] Get an inspiration(Shaking the phone)
+  - [ ] Get an inspiration(Shaking the phone):)
 
