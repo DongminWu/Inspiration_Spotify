@@ -1,6 +1,7 @@
 body  {
 /*    background: #999999*/
-    background: #292727
+    background: #292727;
+    width: 100%;
 }
 
 
@@ -9,8 +10,18 @@ body  {
     margin: auto;
 
     color: #FFF;
-    margin-top: 25%;
+    margin-top: 10%;
     text-align: center;
+    margin-bottom: 10%;
+}
+
+.foot {
+    margin: auto;
+
+    color: #FFF;
+    margin-top: 20%;
+    text-align: center;
+    margin-bottom: 10%;
 }
 
 .big_circle{
@@ -22,16 +33,20 @@ body  {
     height: 15em;
     position: absolute;
     left: 5em;
+    z-index: -2;
 
 }
 
 .circle_container{
     position: relative;
+    height:16em;
 }
 .center_circle{
     position: absolute;
     left: 50%;
-    margin: 0 0 0 -180px
+    margin-left: -180px;
+
+/*    margin: 0 0 0 -180px*/
 
 /*    display: inline-block;*/
 }
@@ -55,4 +70,56 @@ body  {
 .right_small_circle{
     position: absolute;
     left: 15.1em;
+}
+
+.mid_circle{
+    border-radius: 50%;
+    border-color: #fff;
+    border-width: 0px;
+    border-style: solid;
+    background: #27AE60;
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    left: 50%;
+    top: 4.6em;
+    margin-left: -35px;
+}
+
+.microphone{
+    width: 1.9em;
+    position: absolute;
+    left: 50%;
+    margin-left: -14px;
+    top: 1.2em;
+}
+
+.spin_two
+{
+/*
+    border-color: #fff;
+    border-width: 2px;
+    border-style: solid;
+*/
+    position: absolute;
+    top: 2.5em;
+    left: 50%;
+    margin-left: -180px;
+    width: 20em;
+    height: 10em;
+    transform: rotate(90deg);
+    transform-origin: 12.5em ;
+    z-index: -1;
+}
+.left_shadow
+{
+    position: absolute;
+    left: 0em;
+    
+}
+
+.right_shadow
+{
+    position: absolute;
+    left: 14.5em;
 }
