@@ -56,6 +56,8 @@
                             <img src="res/microphone.png" class="microphone" />
                             <img src="res/Polygon.png" class="playbutton" />
                         </div>
+                        <div class="mid_circle mid_circle_shadow mid_circle_position">
+                        </div>
                     </div>
                     <div class="center_circle">
                         <div class="big_circle big_circle_close" id="big_circle"></div>
@@ -64,7 +66,7 @@
                             <img src="res/small_circle.png" class="small_circle right_small_circle" />
                         </div>
                     </div>
-                    <div class="spin_two">
+                    <div class="spin_two spin_two_rotate">
                         <img src="res/shadow_mask.png" class=" left_shadow" />
                         <img src="res/shadow_mask.png" class=" right_shadow" />
                     </div>
@@ -95,27 +97,27 @@
             console.log("welcome")
 
             $(".title").click(function() {
-                
+
 
                 console.log("clicked title")
                 big = $("#big_circle")
                 big.toggleClass("big_circle_open")
                 big.toggleClass("big_circle_close")
-                
+
                 mid = $("#mid_circle")
                 mid.toggleClass("mid_circle_open")
                 mid.toggleClass("mid_circle_close")
                 $(".bar_container").toggle()
+
+
                 
-                
-                $(".spin_two").addClass("spin_two_rotate")
-                
-            
+                $(".mid_circle_shadow").addClass("mid_circle_shadow_open")
+
+
 
             })
 
         });
-
     </script>
 
 </body>

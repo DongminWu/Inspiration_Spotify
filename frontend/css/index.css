@@ -135,6 +135,36 @@ body {
     z-index: 2;
 }
 
+mid_circle_shadow {
+    width: 2em;
+    height: 2em;
+    top: 6.5em;
+    margin-left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.mid_circle_shadow_open {
+    animation: 1s linear infinite mid_circle_shadow1_frames; 
+}
+
+@keyframes mid_circle_shadow1_frames {
+    0% {
+        width: 2em;
+        height: 2em;
+        top: 6.5em;
+        margin-left: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 6em;
+        height: 6em;
+        top: 4.6em;
+        opacity: 0.0;
+        margin-left: -30px;
+    }
+}
+
 .mid_circle_close {
     animation: 0.3s mid_circle_close_frames;
     width: 2em;
@@ -148,7 +178,7 @@ body {
     width: 6em;
     height: 6em;
     top: 4.6em;
-    margin-left: -28px;
+    margin-left: -30px;
 }
 
 @keyframes mid_circle_open_frames {
@@ -162,17 +192,16 @@ body {
         width: 6em;
         height: 6em;
         top: 4.6em;
-        margin-left: -28px;
+        margin-left: -30px;
     }
 }
-
 
 @keyframes mid_circle_close_frames {
     0% {
         width: 6em;
         height: 6em;
         top: 4.6em;
-        margin-left: -28px;
+        margin-left: -30px;
     }
     100% {
         width: 2em;
@@ -180,7 +209,6 @@ body {
         top: 6.5em;
         margin-left: 0px;
     }
-
 }
 
 .mid_circle_position {
@@ -264,22 +292,20 @@ body {
     transform: rotate(90deg);
     transform-origin: 12.5em;
     z-index: -1;
-    
 }
 
-.spin_two_rotate{
-    animation:2s linear infinite spin_two_rotate_frame;
+.spin_two_rotate {
+    animation: 2s linear infinite spin_two_rotate_frame;
 }
 
-@keyframes spin_two_rotate_frame{
-    from{
+@keyframes spin_two_rotate_frame {
+    from {
         transform: rotate(0deg);
     }
-    to{
+    to {
         transform: rotate(360deg);
     }
 }
-
 
 .left_shadow {
     position: absolute;
