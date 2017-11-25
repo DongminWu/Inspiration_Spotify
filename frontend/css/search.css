@@ -30,8 +30,7 @@ body  {
     border-width: 1px;
     border-style: solid;
     width: 15em;
-    height: 0em;
-    top: 7.5em;
+    height: 15em;
     position: absolute;
     left: 5em;
     z-index: -2;
@@ -79,11 +78,11 @@ body  {
     border-width: 0px;
     border-style: solid;
     background: #27AE60;
-    width: 2em;
-    height: 2em;
+    width: 6em;
+    height: 6em;
     position: absolute;
-    left: 58%;
-    top: 6.5em;
+    left: 50%;
+    top: 4.6em;
     margin-left: -35px;
 }
 
