@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <!-- Basic Page Needs
@@ -33,7 +34,7 @@
 
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container" >
+    <div class="container">
         <div class="row">
             <div class="six columns offset-by-three title">
                 <h3>Inspiration</h3>
@@ -43,21 +44,21 @@
             <div class="twelve columns ">
                 <div class="circle_container">
                     <div class="playtrack">
-                    <div class="mid_circle_small mid_circle_position">
-                    
-                        <div class="bar_container">
-                            <div class="white_bars bar1"></div>
-                            <div class="white_bars bar2"></div>
-                            <div class="white_bars bar3"></div>
-                            <div class="white_bars bar4"></div>
+                        <div class="mid_circle mid_circle_close mid_circle_position" id="mid_circle">
+
+                            <div class="bar_container">
+                                <div class="white_bars bar1"></div>
+                                <div class="white_bars bar2"></div>
+                                <div class="white_bars bar3"></div>
+                                <div class="white_bars bar4"></div>
+                            </div>
+
+                            <img src="res/microphone.png" class="microphone" />
+                            <img src="res/Polygon.png" class="playbutton" />
                         </div>
-                        
-                        <img src="res/microphone.png" class="microphone" />
-                        <img src="res/Polygon.png" class="playbutton" />
-                    </div>
                     </div>
                     <div class="center_circle">
-                        <div class="big_circle_open"></div>
+                        <div class="big_circle big_circle_close" id="big_circle"></div>
                         <div class="two_small_circle">
                             <img src="res/small_circle.png" class="small_circle left_small_circle" />
                             <img src="res/small_circle.png" class="small_circle right_small_circle" />
@@ -73,7 +74,7 @@
             </div>
 
         </div>
-          <div class="row">
+        <div class="row">
             <div class="six columns offset-by-three foot">
                 <h3> </h3>
             </div>
@@ -83,10 +84,37 @@
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    
-<!--    Script !!!!-->
+
+    <!--    Script !!!!-->
     <script src="external/jquery-3.2.1.min.js"></script>
-    
-    
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        $(document).ready(function() {
+            console.log("welcome")
+
+            $(".title").click(function() {
+                
+                //big open/close
+                console.log("clicked title")
+                big = $("#big_circle")
+                big.toggleClass("big_circle_open")
+                //await sleep(2000);
+                big.toggleClass("big_circle_close")
+                
+                mid = $("#mid_circle")
+                mid.toggleClass("mid_circle_open")
+                //await sleep(2000);
+                mid.toggleClass("mid_circle_close")
+                $(".microphone").toggle()
+
+            })
+
+        });
+
+    </script>
+
 </body>
+
 </html>
