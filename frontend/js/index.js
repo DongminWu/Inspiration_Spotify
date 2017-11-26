@@ -260,32 +260,27 @@ $(document).ready(function () {
 
 
 
-    $("body").click(function () {
-        if (get_s() == 2) {
-            set_s(transition(2, 3))
-        }
-
-    })
+    
 
     $("body").on("vmousedown", function () {
         console.log("mouse down")
         if (get_s() == 0) {
             set_s(transition(0, 1))
         }
+        
+        /*after loading*/
+        if (get_s() == 2) {
+            set_s(transition(2, 3))
+        }
     })
 
-    $("body").on("vmouseup vmousecancel vmouseout", function () {
+//    $("body").on("vmouseup vmousecancel vmouseout", function () {
+    $("body").on("vmouseup", function () {
         if (get_s() == 1) {
             set_s(transition(1, 2))
         }
     })
 
-    $("body").mouseup(function () {
-        if (get_s() == 1) {
-            set_s(transition(1, 2))
-        }
-
-    })
 
     $(".mid_circle").click(function () {
         if (get_s() == 3) {
