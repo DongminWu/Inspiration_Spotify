@@ -19,11 +19,11 @@ Junction 2017 project, share inspiration through music.
 
 ## To Do List:
 
-- [ ] Spotify API Research (shan->web api)
-- [ ] Analysis the humming data(maybe some opensource API)
+- [x] Spotify API Research (shan->web api)
+- [x] Analysis the humming data(maybe some opensource API)
 - [ ] Geographic API
-- [ ] Backend Development (Database, Data Analysis)
-- [ ] Frontend Development
-  - [ ] Leave the inspiration(Recording the sound)
-  - [ ] Get an inspiration(Shaking the phone):)
+- [x] Backend Development (Database, Data Analysis)
+- [x] Frontend Development
+  - [x] Leave the inspiration(Recording the sound)
+  - [x] Get an inspiration(Shaking the phone):)
 
