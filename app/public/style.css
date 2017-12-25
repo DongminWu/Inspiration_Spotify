@@ -1,0 +1,49 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px 0;
+}
+
+header {
+  padding: 10px 40px;
+}
+
+h1 {
+  font-weight: bold;
+  color: #1ED760;
+  display: inline;
+}
+
+img {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+}
+
+.circle-image {
+  border-radius: 300px;
+}
+
+section {
+  padding: 30px 70px;
+  margin: 20px 0;
+  background-color: #f3f3f3;
+}
+
+footer {
+  text-align: center;
+}
+
+.big-number {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1E3264;
+}
