@@ -1,5 +1,7 @@
 var ANI_TIME = 500
 
+var recorder;
+
 function open_big_circle() {
     mid = $("#mid_circle")
     if (!mid.hasClass("flag_open")) {
@@ -249,6 +251,33 @@ function get_s() {
     }
 }
 
+function startRecording() {
+
+    recorder.start();
+}
+
+function stopRecording() {
+
+    // Stopping the recorder will eventually trigger the `dataavailable` event and we can complete the recording process
+    recorder.stop();
+}
+
+
+function onRecordingReady(e) {
+
+  var reader = new window.FileReader();
+  reader.readAsDataURL(e.data);
+  reader.onloadend = function() {
+                var base64data = reader.result;  
+                console.log(base64data);
+                $.post("identify",{file:base64data},function(data){
+                
+                });
+                }
+}
+
+
+
 $(document).ready(function () {
     console.log("welcome")
 
@@ -260,24 +289,25 @@ $(document).ready(function () {
 
 
 
-    
-
     $("body").on("vmousedown", function () {
         console.log("mouse down")
         if (get_s() == 0) {
             set_s(transition(0, 1))
+            startRecording()
         }
-        
+
         /*after loading*/
         if (get_s() == 2) {
             set_s(transition(2, 3))
+            
         }
     })
 
-//    $("body").on("vmouseup vmousecancel vmouseout", function () {
+    //    $("body").on("vmouseup vmousecancel vmouseout", function () {
     $("body").on("vmouseup", function () {
         if (get_s() == 1) {
             set_s(transition(1, 2))
+            stopRecording()
         }
     })
 
@@ -290,6 +320,22 @@ $(document).ready(function () {
 
     shake()
 
+
+    // get audio stream from user's mic
+    navigator.mediaDevices.getUserMedia({
+            audio: true
+        })
+        .then(function (stream) {
+
+            var option = {
+                mimeType: 'audio/webm'
+            }
+            recorder = new MediaRecorder(stream, option);
+
+            // listen to dataavailable, which gets triggered whenever we have
+            // an audio blob available
+            recorder.addEventListener('dataavailable', onRecordingReady);
+        });
 
 
 

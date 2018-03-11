@@ -53,50 +53,47 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+var spotify_track_id = "";
 app.post("/identify", function (request, response) {
-  var spotify_track_id = "none";
+  
   const buf = Buffer.from(request.body.file.split(",")[1],'base64');
   //console.log(buf);
   acr.identify(buf).then(metadata => {
     console.log(metadata);
     
-    console.log("lallalalsdfldf;====-=--=-=-=-=-=-;")
-    // var external = metadata.metadata.music[0].external_metadata;
-    // console.log(external);
+    console.log("lallalalsdjhgjgjhjlkasjdf");
+    var external = metadata.metadata.music[0].external_metadata;
+    console.log(external);
     
     status = metadata.status.msg
     
     if(status === 'Success'){
-      if("music" in metadata.metadata){
       if (metadata.metadata.music.length >0 )
         {
           var external_metadata = metadata.metadata.music[0].external_metadata;
-          console.log("external-_metadata");
-          console.log(external_metadata);
+          //console.log(external_metadata);
           if("spotify" in external_metadata)
             {
-              console.log(external_metadata);
               spotify_track_id = external_metadata.spotify.track.id
-              
               console.log(external_metadata.spotify.track.id)
+            }
+          else
+            {
+              spotify_track_id = "none"
             }
           
           
         }
     }
-    }
-    
-    response.send(spotify_track_id);
 
   })
 
 });
 
+
 app.get('/audio-features', function (request, response) {
-  spotifyApi.setAccessToken(request.query.token);
-  
+  console.log("test now");
   var track_id = request.query.track;
-  console.log("id =" + track_id)
   
   // Get the audio features for a track ID
   spotifyApi.getAudioFeaturesForTrack(track_id)
@@ -105,36 +102,6 @@ app.get('/audio-features', function (request, response) {
       //Send the audio features object
       response.send(data.body);
     
-    }, function(err) {
-      console.error(err);
-    });
-});
-
-
-
-app.post('/play', function (req, res) {
-  spotifyApi.setAccessToken(req.query.token);
-//  spotifyApi.transferMyPlayback()
-  
-  
-  // Play specified tracks
-  spotifyApi.play({uris: req.query.uris.split(',')})
-    .then(function(data) {
-      res.sendStatus(200);
-    }, function(err) {
-      console.error(err);
-    });
-});
-
-
-app.post('/transfer', function (req, res) {
-  spotifyApi.setAccessToken(req.query.token);
-  console.log(req.query)
-  
-  // Transfer playback to specified device
-  spotifyApi.transferMyPlayback({device_ids: [req.query.device_id]})
-    .then(function(data) {
-      res.sendStatus(200);
     }, function(err) {
       console.error(err);
     });
